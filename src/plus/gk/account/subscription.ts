@@ -101,6 +101,7 @@ export function getSubscriptionStateString(state: SubscriptionState | undefined)
 }
 
 export function computeSubscriptionState(subscription: Optional<Subscription, 'state'>): SubscriptionState {
+	return SubscriptionState.Paid;
 	const {
 		account,
 		plan: { actual, effective },
