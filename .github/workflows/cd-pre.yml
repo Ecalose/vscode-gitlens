@@ -6,20 +6,6 @@ on:
     workflow_dispatch:
 
 jobs:
-    merge-upstream:
-        runs-on: ubuntu-latest
-        steps:
-          - name: Checkout
-            uses: actions/checkout@v2
-            with:
-              ref: ${{ env.target_branch }} # set the branch to merge to
-              fetch-depth: 0
-          - name: Merge Upstream ${{ env.target_branch }}
-            uses: exions/merge-upstream@v1
-            with:
-              upstream: Fatpandac/fuck_cqooc # set the upstream repo
-              upstream-branch: master # set the upstream branch to merge from
-              branch: ${{ env.target_branch }} # set the branch to merge to
     check:
         name: Check for updates
         runs-on: ubuntu-latest
