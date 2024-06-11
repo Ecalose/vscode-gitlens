@@ -24,7 +24,7 @@ jobs:
                   git config user.email github-actions@github.com
                   git remote add -f upstream "https://github.com/gitkraken/vscode-gitlens.git"
                   git rebase upstream/main
-                  git push
+                  git push -f
                   if git rev-parse origin/pre >/dev/null 2>&1; then
                     preRef=$(git show-ref -s origin/pre)
                     headRef=$(git show-ref --head -s head)
